@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="kk_aj_katalogenUserLinq">
+  <DataContextMoniker Name="/kk_aj_katalogenUserLinqDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6478bc40-7be5-48ee-90d5-25af29de3406" absoluteBounds="2.5, 1.125, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/kk_aj_katalogenUserLinqDataContext/kk_aj_tbl_Utovare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="349fd3a8-2e63-4ac5-9c42-f6b00a5c8968" absoluteBounds="2.5149999999999997, 1.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

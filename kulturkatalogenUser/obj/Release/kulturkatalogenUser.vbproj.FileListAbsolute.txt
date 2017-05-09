@@ -1,0 +1,13 @@
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\bin\Release\kulturkatalogenUser.dll.config
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\bin\Release\kulturkatalogenUser.dll
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\bin\Release\kulturkatalogenUser.pdb
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\bin\Release\kulturkatalogenUser.xml
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Release\kulturkatalogenUser.Resources.resources
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Release\kulturkatalogenUser.vbproj.GenerateResource.Cache
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Release\kulturkatalogenUser.dll
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Release\kulturkatalogenUser.xml
+D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Release\kulturkatalogenUser.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.dll
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.xml
