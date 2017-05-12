@@ -67,8 +67,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\usernotifieringHandler.vb" />
     <Compile Include="Dal\katalogenUserDAL.vb" />
     <Compile Include="info\katalogenUserInfo.vb" />
+    <Compile Include="info\notifieringarMainInfo.vb" />
+    <Compile Include="info\notifieringsInfo.vb" />
     <Compile Include="info\userRollInfo.vb" />
     <Compile Include="kk_aj_katalogenUsers.vb" />
     <Compile Include="Linq\kk_aj_katalogenUserLinq.designer.vb">
@@ -123,9 +126,7 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

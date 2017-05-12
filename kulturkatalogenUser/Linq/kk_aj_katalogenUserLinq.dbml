@@ -15,6 +15,17 @@
       <Column Name="Hemsida" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.kk_aj_tbl_Notifieringar" Member="kk_aj_tbl_Notifieringars">
+    <Type Name="kk_aj_tbl_Notifieringar">
+      <Column Name="noteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="noteTypId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="extranote" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.kk_aj_proc_getuserdata" Method="kk_aj_proc_getuserdata">
     <Parameter Name="userid" Type="System.Int32" DbType="Int" />
     <ElementType Name="kk_aj_proc_getuserdataResult">

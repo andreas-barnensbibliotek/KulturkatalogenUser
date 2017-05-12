@@ -37,6 +37,12 @@ Partial Public Class kk_aj_katalogenUserLinqDataContext
     End Sub
   Partial Private Sub Deletekk_aj_tbl_Utovare(instance As kk_aj_tbl_Utovare)
     End Sub
+  Partial Private Sub Insertkk_aj_tbl_Notifieringar(instance As kk_aj_tbl_Notifieringar)
+    End Sub
+  Partial Private Sub Updatekk_aj_tbl_Notifieringar(instance As kk_aj_tbl_Notifieringar)
+    End Sub
+  Partial Private Sub Deletekk_aj_tbl_Notifieringar(instance As kk_aj_tbl_Notifieringar)
+    End Sub
   #End Region
 	
 	Public Sub New()
@@ -67,6 +73,12 @@ Partial Public Class kk_aj_katalogenUserLinqDataContext
 	Public ReadOnly Property kk_aj_tbl_Utovares() As System.Data.Linq.Table(Of kk_aj_tbl_Utovare)
 		Get
 			Return Me.GetTable(Of kk_aj_tbl_Utovare)
+		End Get
+	End Property
+	
+	Public ReadOnly Property kk_aj_tbl_Notifieringars() As System.Data.Linq.Table(Of kk_aj_tbl_Notifieringar)
+		Get
+			Return Me.GetTable(Of kk_aj_tbl_Notifieringar)
 		End Get
 	End Property
 	
@@ -342,6 +354,200 @@ Partial Public Class kk_aj_tbl_Utovare
 				Me._Hemsida = value
 				Me.SendPropertyChanged("Hemsida")
 				Me.OnHemsidaChanged
+			End If
+		End Set
+	End Property
+	
+	Public Event PropertyChanging As PropertyChangingEventHandler Implements System.ComponentModel.INotifyPropertyChanging.PropertyChanging
+	
+	Public Event PropertyChanged As PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+	
+	Protected Overridable Sub SendPropertyChanging()
+		If ((Me.PropertyChangingEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanging(Me, emptyChangingEventArgs)
+		End If
+	End Sub
+	
+	Protected Overridable Sub SendPropertyChanged(ByVal propertyName As [String])
+		If ((Me.PropertyChangedEvent Is Nothing)  _
+					= false) Then
+			RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+		End If
+	End Sub
+End Class
+
+<Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_Notifieringar")>  _
+Partial Public Class kk_aj_tbl_Notifieringar
+	Implements System.ComponentModel.INotifyPropertyChanging, System.ComponentModel.INotifyPropertyChanged
+	
+	Private Shared emptyChangingEventArgs As PropertyChangingEventArgs = New PropertyChangingEventArgs(String.Empty)
+	
+	Private _noteID As Integer
+	
+	Private _noteTypId As System.Nullable(Of Integer)
+	
+	Private _userid As System.Nullable(Of Integer)
+	
+	Private _title As String
+	
+	Private _url As String
+	
+	Private _extranote As String
+	
+	Private _date As System.Nullable(Of Date)
+	
+    #Region "Extensibility Method Definitions"
+    Partial Private Sub OnLoaded()
+    End Sub
+    Partial Private Sub OnValidate(action As System.Data.Linq.ChangeAction)
+    End Sub
+    Partial Private Sub OnCreated()
+    End Sub
+    Partial Private Sub OnnoteIDChanging(value As Integer)
+    End Sub
+    Partial Private Sub OnnoteIDChanged()
+    End Sub
+    Partial Private Sub OnnoteTypIdChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnnoteTypIdChanged()
+    End Sub
+    Partial Private Sub OnuseridChanging(value As System.Nullable(Of Integer))
+    End Sub
+    Partial Private Sub OnuseridChanged()
+    End Sub
+    Partial Private Sub OntitleChanging(value As String)
+    End Sub
+    Partial Private Sub OntitleChanged()
+    End Sub
+    Partial Private Sub OnurlChanging(value As String)
+    End Sub
+    Partial Private Sub OnurlChanged()
+    End Sub
+    Partial Private Sub OnextranoteChanging(value As String)
+    End Sub
+    Partial Private Sub OnextranoteChanged()
+    End Sub
+    Partial Private Sub OndateChanging(value As System.Nullable(Of Date))
+    End Sub
+    Partial Private Sub OndateChanged()
+    End Sub
+    #End Region
+	
+	Public Sub New()
+		MyBase.New
+		OnCreated
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_noteID", AutoSync:=AutoSync.OnInsert, DbType:="Int NOT NULL IDENTITY", IsPrimaryKey:=true, IsDbGenerated:=true)>  _
+	Public Property noteID() As Integer
+		Get
+			Return Me._noteID
+		End Get
+		Set
+			If ((Me._noteID = value)  _
+						= false) Then
+				Me.OnnoteIDChanging(value)
+				Me.SendPropertyChanging
+				Me._noteID = value
+				Me.SendPropertyChanged("noteID")
+				Me.OnnoteIDChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_noteTypId", DbType:="Int")>  _
+	Public Property noteTypId() As System.Nullable(Of Integer)
+		Get
+			Return Me._noteTypId
+		End Get
+		Set
+			If (Me._noteTypId.Equals(value) = false) Then
+				Me.OnnoteTypIdChanging(value)
+				Me.SendPropertyChanging
+				Me._noteTypId = value
+				Me.SendPropertyChanged("noteTypId")
+				Me.OnnoteTypIdChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_userid", DbType:="Int")>  _
+	Public Property userid() As System.Nullable(Of Integer)
+		Get
+			Return Me._userid
+		End Get
+		Set
+			If (Me._userid.Equals(value) = false) Then
+				Me.OnuseridChanging(value)
+				Me.SendPropertyChanging
+				Me._userid = value
+				Me.SendPropertyChanged("userid")
+				Me.OnuseridChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_title", DbType:="NVarChar(100)")>  _
+	Public Property title() As String
+		Get
+			Return Me._title
+		End Get
+		Set
+			If (String.Equals(Me._title, value) = false) Then
+				Me.OntitleChanging(value)
+				Me.SendPropertyChanging
+				Me._title = value
+				Me.SendPropertyChanged("title")
+				Me.OntitleChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_url", DbType:="NVarChar(250)")>  _
+	Public Property url() As String
+		Get
+			Return Me._url
+		End Get
+		Set
+			If (String.Equals(Me._url, value) = false) Then
+				Me.OnurlChanging(value)
+				Me.SendPropertyChanging
+				Me._url = value
+				Me.SendPropertyChanged("url")
+				Me.OnurlChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_extranote", DbType:="NVarChar(250)")>  _
+	Public Property extranote() As String
+		Get
+			Return Me._extranote
+		End Get
+		Set
+			If (String.Equals(Me._extranote, value) = false) Then
+				Me.OnextranoteChanging(value)
+				Me.SendPropertyChanging
+				Me._extranote = value
+				Me.SendPropertyChanged("extranote")
+				Me.OnextranoteChanged
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Name:="date", Storage:="_date", DbType:="DateTime")>  _
+	Public Property [date]() As System.Nullable(Of Date)
+		Get
+			Return Me._date
+		End Get
+		Set
+			If (Me._date.Equals(value) = false) Then
+				Me.OndateChanging(value)
+				Me.SendPropertyChanging
+				Me._date = value
+				Me.SendPropertyChanged("[date]")
+				Me.OndateChanged
 			End If
 		End Set
 	End Property

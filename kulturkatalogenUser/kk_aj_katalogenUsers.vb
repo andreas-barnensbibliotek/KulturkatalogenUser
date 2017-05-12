@@ -6,4 +6,9 @@
         Return _dalobj.getUserData(userid)
 
     End Function
+
+    Public Function getallaNoteifieringar(userid As Integer) As notifieringarMainInfo
+        Dim notobj As New usernotifieringHandler
+        Return notobj.getallnotifications(userid)
+    End Function
 End Class
