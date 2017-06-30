@@ -7,3 +7,7 @@ D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Debug\kultur
 D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Debug\kulturkatalogenUser.dll
 D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Debug\kulturkatalogenUser.xml
 D:\devprojekt\libraries\kulturkatalogenUser\kulturkatalogenUser\obj\Debug\kulturkatalogenUser.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.dll.config
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.dll
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.pdb
+D:\devprojekt\api\kulturkatalogenAPI_v1\kulturkatalogenAPI_v1\bin\kulturkatalogenUser.xml
