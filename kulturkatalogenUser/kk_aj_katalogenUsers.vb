@@ -6,7 +6,11 @@
         Return _dalobj.getUserData(userid)
 
     End Function
+    Public Function getUsersbykonstform(konstformid As Integer) As List(Of katalogenUserInfo)
 
+        Return _dalobj.getusersinkonstform(konstformid)
+
+    End Function
     Public Function getallaNoteifieringar(userid As Integer) As notifieringarMainInfo
         Dim notobj As New usernotifieringHandler
         Return notobj.getallnotifications(userid)

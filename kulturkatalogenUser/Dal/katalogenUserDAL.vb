@@ -1,6 +1,6 @@
 ﻿Public Class katalogenUserDAL
-    'Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
-    Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
+    Private _connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=dnndev_v902.me;Persist Security Info=True;User ID=dnndev_v902.me;Password=L0rda1f"
+    'Private _connectionString As String = "Data Source=DE-1896;Initial Catalog=kulturkatalogenDB;User ID=kulturkatalogenDB;Password=L0rda1f"
     Private _linqObj As New kk_aj_katalogenUserLinqDataContext(_connectionString)
 
 #Region "användardata"
@@ -72,7 +72,29 @@
         Return retobj
     End Function
 #End Region
+#Region "Användare i konstformtyp"
 
+    Public Function getusersinkonstform(konstformid As Integer) As List(Of katalogenUserInfo)
+
+        Dim retobj = New List(Of katalogenUserInfo)
+
+        Dim usrkonstformlist = From p In _linqObj.kk_aj_proc_userinrollbykonstformtyp(konstformid)
+                               Select p
+
+        For Each t In usrkonstformlist
+            Dim tmp As New katalogenUserInfo
+
+            tmp.Userid = t.UserID
+            tmp.userfornamn = t.FirstName
+            tmp.userefternamn = t.LastName
+            tmp.userepost = t.Email
+            retobj.Add(tmp)
+        Next
+
+        Return retobj
+    End Function
+
+#End Region
 #Region "notifieringar och messages"
     Public Function getnotifieringar(userid As Integer, notetyp As Integer) As List(Of notifieringsInfo)
         Dim retobj As New List(Of notifieringsInfo)

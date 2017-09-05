@@ -93,6 +93,12 @@ Partial Public Class kk_aj_katalogenUserLinqDataContext
 		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), userid)
 		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_getuserrollsResult))
 	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="dbo.kk_aj_proc_userinrollbykonstformtyp")>  _
+	Public Function kk_aj_proc_userinrollbykonstformtyp(<Global.System.Data.Linq.Mapping.ParameterAttribute(DbType:="Int")> ByVal konstformtypid As System.Nullable(Of Integer)) As ISingleResult(Of kk_aj_proc_userinrollbykonstformtypResult)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo), konstformtypid)
+		Return CType(result.ReturnValue,ISingleResult(Of kk_aj_proc_userinrollbykonstformtypResult))
+	End Function
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="dbo.kk_aj_tbl_Utovare")>  _
@@ -709,6 +715,127 @@ Partial Public Class kk_aj_proc_getuserrollsResult
 			If ((Me._RoleID = value)  _
 						= false) Then
 				Me._RoleID = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class kk_aj_proc_userinrollbykonstformtypResult
+	
+	Private _KonstformID As Integer
+	
+	Private _dnnRollid As System.Nullable(Of Integer)
+	
+	Private _UserID As Integer
+	
+	Private _Username As String
+	
+	Private _FirstName As String
+	
+	Private _LastName As String
+	
+	Private _Email As String
+	
+	Private _DisplayName As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_KonstformID", DbType:="Int NOT NULL")>  _
+	Public Property KonstformID() As Integer
+		Get
+			Return Me._KonstformID
+		End Get
+		Set
+			If ((Me._KonstformID = value)  _
+						= false) Then
+				Me._KonstformID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_dnnRollid", DbType:="Int")>  _
+	Public Property dnnRollid() As System.Nullable(Of Integer)
+		Get
+			Return Me._dnnRollid
+		End Get
+		Set
+			If (Me._dnnRollid.Equals(value) = false) Then
+				Me._dnnRollid = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_UserID", DbType:="Int NOT NULL")>  _
+	Public Property UserID() As Integer
+		Get
+			Return Me._UserID
+		End Get
+		Set
+			If ((Me._UserID = value)  _
+						= false) Then
+				Me._UserID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Username", DbType:="NVarChar(100) NOT NULL", CanBeNull:=false)>  _
+	Public Property Username() As String
+		Get
+			Return Me._Username
+		End Get
+		Set
+			If (String.Equals(Me._Username, value) = false) Then
+				Me._Username = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_FirstName", DbType:="NVarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property FirstName() As String
+		Get
+			Return Me._FirstName
+		End Get
+		Set
+			If (String.Equals(Me._FirstName, value) = false) Then
+				Me._FirstName = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LastName", DbType:="NVarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property LastName() As String
+		Get
+			Return Me._LastName
+		End Get
+		Set
+			If (String.Equals(Me._LastName, value) = false) Then
+				Me._LastName = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_Email", DbType:="NVarChar(256)")>  _
+	Public Property Email() As String
+		Get
+			Return Me._Email
+		End Get
+		Set
+			If (String.Equals(Me._Email, value) = false) Then
+				Me._Email = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DisplayName", DbType:="NVarChar(128) NOT NULL", CanBeNull:=false)>  _
+	Public Property DisplayName() As String
+		Get
+			Return Me._DisplayName
+		End Get
+		Set
+			If (String.Equals(Me._DisplayName, value) = false) Then
+				Me._DisplayName = value
 			End If
 		End Set
 	End Property
