@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controllers\usernotifieringHandler.vb" />
+    <Compile Include="Dal\connectionstringHandler.vb" />
     <Compile Include="Dal\katalogenUserDAL.vb" />
     <Compile Include="info\katalogenUserInfo.vb" />
     <Compile Include="info\notifieringarMainInfo.vb" />
